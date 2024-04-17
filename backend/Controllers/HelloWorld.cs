@@ -7,5 +7,10 @@ namespace backend.Controllers
     [ApiController]
     public class HelloWorld : ControllerBase
     {
+        [HttpGet("/api/hello")]  // This now effectively maps to GET /demo
+        public ActionResult<string> GetDemo()
+        {
+            return "Hello World";
+        }
     }
 }
